@@ -1,9 +1,19 @@
 import React from "react";
-import {StyledTextInput, StyledFormArea, StyledFormButton, StyledLabel, StyledTittle, colors, ButtonGroup} from '../styled/Styles'
+import {StyledTextInput,
+    StyledContainer,
+     StyledFormArea, 
+     StyledFormButton, 
+     StyledLabel, 
+     StyledTittle, 
+     colors, 
+     ButtonGroup, 
+     CopyrightText} from '../styled/Styles'
 import { Formik, Form } from "formik";
 import { TextInput } from "./FormLib";
 import {FiMail, FiLock} from 'react-icons/fi';
-import * as Yup from 'yup';
+import Loader from "react-loader-spinner";
+
+import validationSchema from "./ValidationSchema";
 
 const Login = () =>{
 
@@ -16,11 +26,14 @@ const Login = () =>{
                         email: "",
                         password: "",
                     }}
+                    validationSchema={
+                        validationSchema
+                    }
                     onSubmit={(values, setSubmitting) =>{
                         console.log(values);
                     }}
                 >
-                    {() => (
+                    {({isSubmitting}) => (
                         <Form>
                              <TextInput 
                                 name="email"
@@ -37,14 +50,23 @@ const Login = () =>{
                                 icon={<FiLock/>}
                             />
                             <ButtonGroup>
-                                <StyledFormButton type="submit">
+                                {!isSubmitting &&<StyledFormButton type="submit">
                                     Login
-                                </StyledFormButton>
+                                </StyledFormButton>}
+                                {isSubmitting && (
+                                    <Loader 
+                                        type="ThreeDots"
+                                        color={colors.theme}
+                                        height={50}
+                                        width={100}
+                                    />
+                                )}
                             </ButtonGroup>
                         </Form>
                     )}
                 </Formik>
             </StyledFormArea>
+            <CopyrightText>All rights reserved &copy;2021</CopyrightText>
         </div>
     )
 }
