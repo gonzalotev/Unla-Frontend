@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useField } from "formik";
-import { StyledTextInput, StyledLabel, StyledIcon } from '../styled/Styles';
+import { StyledTextInput, StyledLabel, StyledIcon, ErrorMsg } from '../styled/Styles';
 import { FiEyeOff, FiEye } from "react-icons/fi";
 
 export const TextInput = ({icon, ...props}) => {
@@ -12,10 +12,16 @@ export const TextInput = ({icon, ...props}) => {
             <StyledLabel htmlFor={props.name}>
                 {props.label}
             </StyledLabel>
-            {props.type !== "password" && <StyledTextInput {...field} {...props}
+            {props.type !== "password" && <StyledTextInput 
+            invalid={meta.touched && meta.error} //change color in case of error
+            {...field} 
+            {...props}
             />}
             {props.type === "password" && (
-                <StyledTextInput  {...field} {...props}
+                <StyledTextInput  
+                invalid={meta.touched && meta.error}
+                {...field} 
+                {...props}
                 type={show ? "text" : "password"}
                 />
             )}
@@ -30,6 +36,12 @@ export const TextInput = ({icon, ...props}) => {
                     {!show && <FiEyeOff/>}
                 </StyledIcon>
             }
+
+            {meta.touched && meta.error ? (
+                <ErrorMsg>{meta.error}</ErrorMsg>
+            ): (
+                <ErrorMsg style={{visibility: "hidden"}}>.</ErrorMsg>
+            )}
         </div>
     )
 }

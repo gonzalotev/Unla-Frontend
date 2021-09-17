@@ -77,6 +77,8 @@ export const StyledFormArea = styled.div`
     background-color: ${props => props.bg || colors.light1};
     text-align: center;
     padding: 45px 55px;
+    padding-left: 500px;
+    margin-top: 100px
 `;
 
 export const StyledFormButton = styled.button`
@@ -103,6 +105,24 @@ export const ButtonGroup = styled.div`
     margin-top: 25px;
 `;
 
+export const ErrorMsg = styled.div`
+    font-size: 15px;
+    color: ${colors.red};
+    margin-top: -5px;
+    margin-bottom: 10px;
+    text-align: center;
+`;
+
+export const ExtraText = styled.p`
+    font-size: ${(props) => props.size}px;
+    text-align: center;
+    color: ${(props) => (props.color? props.color : colors.dark2)};
+    padding: 2px;
+    margin-top: 10px;
+`;
+
+
+
 //icons
 
 export const StyledIcon = styled.p`
@@ -112,4 +132,11 @@ export const StyledIcon = styled.p`
     top: 35px;
     ${(props) => props.right && `rigth. 15px; `}
     ${(props) => !props.right && `left: 15px; `};
+`;
+
+export const CopyrightText = styled.p`
+    padding: 5px;
+    margin:20px;
+    text-align: center;
+    color: ${colors.dark1};
 `;

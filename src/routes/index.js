@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Login from "../components/Login/Login";
 import Form from "../pages/Form";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
 
