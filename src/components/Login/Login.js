@@ -7,20 +7,21 @@ import {StyledTextInput,
      StyledTittle, 
      colors, 
      ButtonGroup, 
-     CopyrightText} from '../styled/Styles'
+     CopyrightText} from './Styles'
 import { Formik, Form } from "formik";
 import { TextInput } from "./FormLib";
 import {FiMail, FiLock} from 'react-icons/fi';
 import Loader from "react-loader-spinner";
+
 
 import validationSchema from "./ValidationSchema";
 
 const Login = () =>{
 
     return(
-        <div>
+        <StyledContainer>
             <StyledFormArea>
-                <StyledTittle color={colors.dark2} size={30}>Login</StyledTittle>
+                <StyledTittle color={colors.dark2} size={50}>Login</StyledTittle>
                 <Formik
                     initialValues={{
                         email: "",
@@ -47,7 +48,6 @@ const Login = () =>{
                                 type="password"
                                 label="Contraseña"
                                 placeholder="*********"
-                                icon={<FiLock/>}
                             />
                             <ButtonGroup>
                                 {!isSubmitting &&<StyledFormButton type="submit">
@@ -65,9 +65,10 @@ const Login = () =>{
                         </Form>
                     )}
                 </Formik>
+                
             </StyledFormArea>
             <CopyrightText>All rights reserved &copy;2021</CopyrightText>
-        </div>
+        </StyledContainer>
     )
 }
 

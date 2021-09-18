@@ -10,7 +10,10 @@ const Home = () => {
 
     return(
         <div className="home">
-            
+                <br/>
+                <Link className="btnacceder" to="/Login">
+                 ACCEDER
+                </Link>
              <h1 id="TittleISDLA">ISDLA</h1>
              <h2 id="subtittle">Instituto Superior De La Alegria</h2>
              <h3 id="bienvenida">¡Bienvenido!</h3>
@@ -23,9 +26,7 @@ const Home = () => {
                     <li id="puntito">Tipo y Numero de documento</li>
                     <li id="puntito2"> Casilla de correo electronico</li>
              </p>
-             <Link className="btnacceder" to="/Login">
-                 ACCEDER
-             </Link>
+             
         </div>
       
     )

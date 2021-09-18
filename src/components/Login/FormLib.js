@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useField } from "formik";
-import { StyledTextInput, StyledLabel, StyledIcon, ErrorMsg } from '../styled/Styles';
+import { StyledTextInput, StyledLabel, StyledIcon, ErrorMsg } from './Styles';
 import { FiEyeOff, FiEye } from "react-icons/fi";
 
 export const TextInput = ({icon, ...props}) => {
@@ -26,12 +26,12 @@ export const TextInput = ({icon, ...props}) => {
                 />
             )}
 
-            <StyledIcon>
+            <StyledIcon >
                 {icon}
             </StyledIcon>
             {
                 props.type === "password" &&
-                <StyledIcon onClick={() => setShow(!show)} right>
+                <StyledIcon onClick={() => setShow(!show)} >
                     {show &&<FiEye/>}
                     {!show && <FiEyeOff/>}
                 </StyledIcon>

@@ -12,7 +12,7 @@
     font-family: fantasy;
     color: white;
     text-align: center;
-    font-size: 140px;
+    font-size: 180px;
     padding: 10px;
     margin-top: 0px;
 }
@@ -28,12 +28,12 @@
     font-family: fantasy;
     color: white;
     text-align: center;
-    font-size: 40px;
+    font-size: 40px ;
     margin-top: 40px;
 }
 
 #importante{
-    background-color:#FF0000;
+    background-color:#002fff;
     font-family: fantasy;
     color: white;
     font-size: 30px;
@@ -47,9 +47,9 @@
 #boxhome{
     display: block;
     font-family: fantasy;
-    background-color: #CDC2C2;
+    background-color: #8DA2F8;
     color: black;
-    font-size: 25px;
+    font-size: 25px ;
     border: black solid 1px;
     border-radius: 15px;
     width: 1400px;
@@ -60,21 +60,10 @@
 }
 
 .btnacceder{
-    display: flex;
-    height: 60px;
-    width: 230px;
-    padding: 20px;
-    font-size: 50px;
+    font-size: 35px;
     text-decoration: none;
-    border: 1px solid;
-    border-radius: 4px;
-    color: #fff;
-    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,0 1px 3px rgba(0,0,0,.2);
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,rgb(56, 91, 207)),to(#002fff));
-    background-image: linear-gradient(rgb(56, 91, 207) 10%,#002fff 100%);
-    margin-left: 830px;
-    margin-top: 30px;   
+    margin-left: 1700px;
+    margin-top: 20%;
 }
 
 #puntito{
