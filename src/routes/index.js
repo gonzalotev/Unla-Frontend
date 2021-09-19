@@ -1,27 +1,30 @@
-import React from "react";
-import { Route, Switch } from 'react-router';
-import { BrowserRouter as Router } from "react-router-dom";
-import Home from "../pages/Home/Home";
-import Login from "../components/Login/Login";
-import Form from "../pages/Form";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import React, { useEffect } from 'react';
+import { history } from 'store';
+import { useDispatch, useSelector } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import { getToken, getIsRequested } from 'store/Auth/selectors';
+import { authGetTokenRequest } from 'store/Auth/actions';
 
+import { GlobalStyle } from './styled';
+import WithSessionRoutes from './withSessionRoutes';
+import WithoutSessionRoutes from './withoutSessionRoutes';
 
+const Routes = () => {
+  const dispatch = useDispatch();
+  const token = useSelector(getToken);
+  const isRequested = useSelector(getIsRequested);
+  const getRoutes = (newToken) => (newToken ? <WithSessionRoutes /> : <WithoutSessionRoutes />);
 
-const Routes = () =>{
+  useEffect(() => {
+    dispatch(authGetTokenRequest());
+  }, []);
 
-    return(
-        <Router>
-          
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/Login" component={Login} />
-                    <Route exact path="/Form" component={Form} />
-                </Switch>
-
-        </Router>
-    )
-   
+  return (
+    <ConnectedRouter history={history}>
+      <GlobalStyle />
+      {isRequested && getRoutes(token)}
+    </ConnectedRouter>
+  );
 };
 
 export default Routes;
