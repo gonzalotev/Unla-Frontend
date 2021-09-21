@@ -39,6 +39,7 @@ export const Alert = styled.h4`
   width: fit-content;
   border-radius: 15px;
   padding: 5px 15px;
+  margin-left: 3%;
 `;
 
 export const Wrapper = styled.div`
@@ -56,9 +57,10 @@ export const Body = styled.p`
   font-size: 25px;
   border: black solid 1px;
   border-radius: 15px;
-  width: 90%;
+  width: 95%;
   text-align: center;
-  
+  margin-left: 3%;
+  margin-top: -2%;
 `;
 
 export const AccessLink = styled.button`
@@ -67,6 +69,6 @@ export const AccessLink = styled.button`
   margin-top: 1%;
   border: none;
   color: whitesmoke;
-  background-color: rgb(62,94,199) ;
+  background-color: rgb(145, 171, 239);
   margin-left: 80%;
 `;
