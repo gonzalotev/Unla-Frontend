@@ -9,6 +9,7 @@ import { colors } from 'constant';
 import { useDispatch, useSelector } from 'react-redux';
 import { authLoginRequest } from 'store/Auth/actions';
 import { getError, getIsLoading } from 'store/Auth/selectors';
+import { push } from 'connected-react-router';
 
 import validationSchema from './ValidationSchema';
 import {
@@ -25,6 +26,7 @@ const Login = () => {
   const [eye, setEye] = useState(false);
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
+  const goToHome = () => dispatch(push('/Home'));
 
   return (
     <Container>
@@ -66,6 +68,11 @@ const Login = () => {
                   Login
                 </StyledFormButton>
               )}
+            </ButtonGroup>
+            <ButtonGroup>
+              <StyledFormButton onClick={goToHome}>
+                Cancelar
+              </StyledFormButton>
             </ButtonGroup>
           </Form>
         </Formik>
