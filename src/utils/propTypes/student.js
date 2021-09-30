@@ -1,0 +1,28 @@
+import PropTypes from 'prop-types';
+
+export default PropTypes.shape({
+  id: PropTypes.number,
+  documentType: PropTypes.number,
+  document: PropTypes.number,
+  name: PropTypes.string,
+  surname: PropTypes.string,
+  gender: PropTypes.number,
+  birthDate: PropTypes.string,
+  nationality: PropTypes.string,
+  civilState: PropTypes.number,
+  email: PropTypes.string,
+  telephone: PropTypes.number,
+  cellphone: PropTypes.number,
+  educationStateFather: PropTypes.string,
+  educationStateMother: PropTypes.string,
+  state: PropTypes.number,
+  department: PropTypes.number,
+  street: PropTypes.string,
+  doorNumber: PropTypes.string,
+  floor: PropTypes.string,
+  block: PropTypes.string,
+  zipCode: PropTypes.string,
+  inscription: PropTypes.number,
+  career: PropTypes.number,
+  faculty: PropTypes.number,
+});
