@@ -42,11 +42,11 @@ export const Alert = styled.h4`
   margin-left: 3%;
 `;
 
-export const Wrapper = styled.div`
+/*export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
 
-`;
+`;*/
 
 export const Body = styled.p`
   display: flex;
