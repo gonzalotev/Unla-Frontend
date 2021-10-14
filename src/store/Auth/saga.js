@@ -8,7 +8,8 @@ import { push } from 'connected-react-router';
 export function* login({ email, password }) {
   try {
     const user = yield call(requestLogin, email, password);
-    if (user) {
+    console.log(user);
+    if (user !== 401) {
       const token = 'test token';
       yield setToken(token);
       yield put(authLoginSuccess(user, token));

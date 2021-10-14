@@ -27,18 +27,16 @@ const http = {
   post: async (url, body) => {
     const response = await fetch(`${REACT_APP_ENDPOINT}${url}`, {
       method: 'post',
-      credentials: 'same-origin',
       body: JSON.stringify(body),
       headers: {
         'content-type': 'application/json',
         referrer: REACT_APP_ENDPOINT,
-        Authorization: `Bearer ${window.localStorage.getItem('id_token')}`,
       },
     });
     if (response.status === 400) {
       throw new Error();
     }
-    return response.json();
+    return response;
   },
   put: async (url, body) => {
     const response = await fetch(`${REACT_APP_ENDPOINT}${url}`, {

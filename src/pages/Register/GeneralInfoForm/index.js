@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { MessageError, Dropdown, DatePickerLocale } from 'components';
-import { Input } from 'styled/inputs';
+import { Input } from 'styled/input';
 import { commonWidthStyle, FormGroup, Row } from 'styled/base';
 import { WrapperInputs, StyledForm } from 'styled/form';
 import { Button } from 'styled/buttons';
@@ -51,7 +51,7 @@ const RegisterForm = ({ initialValues, onSubmit, onCancel }) => (
           <FormGroup $bsStyle={commonWidthStyle}>
             <DatePickerLocale
               value={values.birthDate}
-              onChange={date => setFieldValue('birthDate', date)}
+              onChange={(date) => setFieldValue('birthDate', date)}
               placeholder="Fecha de Nacimiento *"
             />
             <MessageError name="birthDate" />

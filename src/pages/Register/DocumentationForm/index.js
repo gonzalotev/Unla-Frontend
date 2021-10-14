@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { MessageError, UploadPicture, UploadPDF } from 'components';
-import { commonWidthStyle, FormGroup, Row, Label } from 'styled/base';
+import {
+  commonWidthStyle, FormGroup, Row, Label,
+} from 'styled/base';
 import { WrapperInputs, StyledForm } from 'styled/form';
 import { Button } from 'styled/buttons';
 import { Formik } from 'formik';
@@ -9,7 +11,9 @@ import { studentProps } from 'utils';
 
 import validationSchema from './validation-schema';
 
-const DocumentationForm = ({ onSubmit, initialValues, onBack, onCancel }) => (
+const DocumentationForm = ({
+  onSubmit, initialValues, onBack, onCancel,
+}) => (
   <Formik validationSchema={validationSchema} initialValues={initialValues} onSubmit={onSubmit}>
     {({ values, setFieldValue }) => (
       <StyledForm>
@@ -23,7 +27,7 @@ const DocumentationForm = ({ onSubmit, initialValues, onBack, onCancel }) => (
           <FormGroup $bsStyle={commonWidthStyle}>
             <UploadPicture
               name="personalPhoto"
-              onUpload={file => setFieldValue('personalPhoto', file)}
+              onUpload={(file) => setFieldValue('personalPhoto', file)}
             />
             <MessageError name="personalPhoto" />
           </FormGroup>
@@ -32,7 +36,7 @@ const DocumentationForm = ({ onSubmit, initialValues, onBack, onCancel }) => (
           <FormGroup $bsStyle={commonWidthStyle}>
             <UploadPDF
               name="documentPhoto"
-              onUpload={file => setFieldValue('documentPhoto', file)}
+              onUpload={(file) => setFieldValue('documentPhoto', file)}
             />
             <MessageError name="documentPhoto" />
           </FormGroup>
@@ -41,7 +45,7 @@ const DocumentationForm = ({ onSubmit, initialValues, onBack, onCancel }) => (
           <FormGroup $bsStyle={commonWidthStyle}>
             <UploadPDF
               name="certificatePhoto"
-              onUpload={file => setFieldValue('certificatePhoto', file)}
+              onUpload={(file) => setFieldValue('certificatePhoto', file)}
             />
             <MessageError name="certificatePhoto" />
           </FormGroup>
@@ -50,7 +54,7 @@ const DocumentationForm = ({ onSubmit, initialValues, onBack, onCancel }) => (
           <FormGroup $bsStyle={commonWidthStyle}>
             <UploadPDF
               name="approvedMattersPhoto"
-              onUpload={file => setFieldValue('approvedMattersPhoto', file)}
+              onUpload={(file) => setFieldValue('approvedMattersPhoto', file)}
             />
             <MessageError name="approvedMattersPhoto" />
           </FormGroup>

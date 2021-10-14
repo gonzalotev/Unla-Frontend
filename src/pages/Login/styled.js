@@ -57,3 +57,31 @@ export const CopyrightText = styled.p`
   text-align: center;
   color: ${colors.dark1};
 `;
+
+export const StyledTextInput = styled.div`
+padding: 5px;
+margin:20px;
+text-align: center;
+color: ${colors.dark1};
+`;
+
+export const StyledLabel = styled.p`
+padding: 5px;
+margin:20px;
+text-align: center;
+color: ${colors.dark1};
+`;
+
+export const StyledIcon = styled.p`
+padding: 5px;
+margin:20px;
+text-align: center;
+color: ${colors.dark1};
+`;
+
+export const ErrorMsg = styled.p`
+padding: 5px;
+margin:20px;
+text-align: center;
+color: ${colors.dark1};
+`;

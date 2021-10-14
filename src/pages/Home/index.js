@@ -10,7 +10,7 @@ import {
   Alert,
   Body,
   AccessLink,
-  Wrapper,
+
 } from './styled';
 
 const Home = () => {
@@ -26,7 +26,7 @@ const Home = () => {
       <SubTitle>Instituto Superior De La Alegria</SubTitle>
       <HighlightedText>¡Bienvenido!</HighlightedText>
       <HighlightedText>Solicitud de Inscripción</HighlightedText>
-      <Alert>Importante</Alert> 
+      <Alert>Importante</Alert>
       <Body>
         Para acceder al sistema por primera vez tiene que disponer de un usuario y contraseña.
         Para ellos, debes escribir a la casilla de correo
