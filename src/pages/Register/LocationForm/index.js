@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { MessageError, Dropdown } from 'components';
-import { Input } from 'styled/inputs';
+import { Input } from 'styled/input';
 import { commonWidthStyle, FormGroup, Row } from 'styled/base';
 import { WrapperInputs, StyledForm } from 'styled/form';
 import { Button } from 'styled/buttons';

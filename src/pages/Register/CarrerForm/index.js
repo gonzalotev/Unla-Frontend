@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { MessageError, Dropdown, Check, Modal } from 'components';
+import {
+  MessageError, Dropdown, Check, Modal,
+} from 'components';
 import { Link } from 'react-router-dom';
 import { commonWidthStyle, FormGroup, Row } from 'styled/base';
 import { WrapperInputs, StyledForm } from 'styled/form';
 import { Button } from 'styled/buttons';
-import { careers, inscriptions, faculties, rotations } from 'constant';
+import {
+  careers, inscriptions, faculties, rotations,
+} from 'constant';
 import { Formik } from 'formik';
 import { studentProps } from 'utils';
 import TermsAndConditions from 'pages/Register/TermsAndConditions';
@@ -64,14 +68,14 @@ const LocationForm = ({ onSubmit, initialValues, onBack }) => {
           <WrapperInputs>
             <FormGroup>
               <Check
-                label={
+                label={(
                   <>
                     Para confirmar la solicitud de Admisión, por favor leer los&nbsp;
                     <Link href="/" onClick={() => setShowModal(!showModal)}>
                       Términos y Condiciones
                     </Link>
                   </>
-                }
+                )}
                 name="terms"
               />
               <MessageError name="terms" />

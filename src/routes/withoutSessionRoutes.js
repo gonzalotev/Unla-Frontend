@@ -6,7 +6,9 @@ import Home from 'pages/Home';
 
 const WithoutSessionRoutes = () => (
   <Switch>
-    <Route exact path="/login" component={Login} />
+    <Route exact path="/login">
+      <Login />
+    </Route>
     <Route component={Home} />
   </Switch>
 );
