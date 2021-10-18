@@ -11,9 +11,9 @@ import { studentProps } from 'utils';
 
 import validationSchema from './validation-schema';
 
-const RegisterForm = ({ initialValues, onSubmit, onCancel }) => (
+const RegisterForm = ({ initialValues = { document: '' }, onSubmit, onCancel }) => (
   <Formik validationSchema={validationSchema} initialValues={initialValues} onSubmit={onSubmit}>
-    {({ values, handleChange, setFieldValue }) => (
+    {({ values = {}, handleChange, setFieldValue }) => (
       <StyledForm>
         <WrapperInputs>
           <FormGroup $bsStyle={commonWidthStyle}>
@@ -21,7 +21,7 @@ const RegisterForm = ({ initialValues, onSubmit, onCancel }) => (
               name="documentType"
               placeholder="Tipo de Documento *"
               onChange={handleChange}
-              value={values.documentType}
+              value={values.documentType || 1}
               options={documentTypes}
             />
             <MessageError name="documentType" />
@@ -43,7 +43,7 @@ const RegisterForm = ({ initialValues, onSubmit, onCancel }) => (
               name="gender"
               placeholder="Sexo *"
               onChange={handleChange}
-              value={values.gender}
+              value={values.gender || 1}
               options={genders}
             />
             <MessageError name="gender" />

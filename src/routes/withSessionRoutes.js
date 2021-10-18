@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
 
-import RegisterForm from 'pages/Register/GeneralInfoForm';
+import Register from 'pages/Register/index';
 
 const WithSessionRoutes = () => (
   <Switch>
-    <Route component={RegisterForm} />
+    <Route component={Register} />
   </Switch>
 );
 

@@ -6,7 +6,7 @@ import { mergeObject } from 'utils';
 import { useHistory } from 'react-router-dom';
 import LocationForm from 'pages/Register/LocationForm';
 import GeneralInfoForm from 'pages/Register/GeneralInfoForm';
-import CareerForm from 'pages/Register/CareerForm';
+import CareerForm from 'pages/Register/CarrerForm';
 import DocumentationForm from 'pages/Register/DocumentationForm';
 
 const Register = () => {
