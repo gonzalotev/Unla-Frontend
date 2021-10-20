@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { initialStates } from 'constant';
 import { Title, Container } from 'styled/base';
-import { BreadCrumb } from 'components';
+import { BreadCrumb, Footer, Header } from 'components';
 import { mergeObject } from 'utils';
 import { useHistory } from 'react-router-dom';
 import LocationForm from 'pages/Register/LocationForm';
@@ -30,7 +30,7 @@ const Register = () => {
 
   return (
     <Container>
-      <Title>Register</Title>
+      <Header />
       <BreadCrumb selectedStep={step + 1} />
       {step === 0 && (
         <GeneralInfoForm onSubmit={handleNext} onCancel={handleCancel} initialValues={store} />
@@ -47,6 +47,7 @@ const Register = () => {
           initialValues={store}
         />
       )}
+      <Footer />
     </Container>
   );
 };
