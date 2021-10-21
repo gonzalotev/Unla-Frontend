@@ -71,7 +71,7 @@ const RegisterForm = ({ initialValues = { document: '' }, onSubmit, onCancel }) 
             <MessageError name="civilState" />
           </FormGroup>
           <FormGroup $bsStyle={commonWidthStyle}>
-            <Input name="email" placeholder="Email" />
+            <Input name="email" placeholder="Email *" />
             <MessageError name="email" />
           </FormGroup>
           <FormGroup $bsStyle={commonWidthStyle}>
@@ -79,7 +79,7 @@ const RegisterForm = ({ initialValues = { document: '' }, onSubmit, onCancel }) 
             <MessageError name="telephone" />
           </FormGroup>
           <FormGroup $bsStyle={commonWidthStyle}>
-            <Input name="cellphone" placeholder="Teléfono Móvil" />
+            <Input name="cellphone" placeholder="Teléfono Móvil *" />
             <MessageError name="cellphone" />
           </FormGroup>
           <FormGroup $bsStyle={commonWidthStyle}>
@@ -92,7 +92,7 @@ const RegisterForm = ({ initialValues = { document: '' }, onSubmit, onCancel }) 
           </FormGroup>
         </WrapperInputs>
         <Row right>
-          <Button onClick={onCancel}>Cancel</Button>
+          <Button onClick={onCancel}>Cancelar</Button>
           <Button type="submit">Siguiente</Button>
         </Row>
       </StyledForm>

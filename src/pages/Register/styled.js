@@ -12,3 +12,10 @@ export const Container = styled.div`
   padding-bottom: 50px;
   background: white;
 `;
+
+export const TextAlert = styled.p`
+  display: flex; 
+  height: 80%;
+  width: 100%;
+  padding-left: 10%;
+`;

@@ -27,13 +27,7 @@ const LocationForm = ({ onSubmit, onBack, initialValues }) => (
             <MessageError name="state" />
           </FormGroup>
           <FormGroup $bsStyle={commonWidthStyle}>
-            <Dropdown
-              name="department"
-              placeholder="Localidad *"
-              onChange={handleChange}
-              value={values.department}
-              options={states}
-            />
+            <Input name="department" placeholder="Localidad *" />
             <MessageError name="department" />
           </FormGroup>
           <FormGroup $bsStyle={commonWidthStyle}>

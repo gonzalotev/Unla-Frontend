@@ -8,6 +8,7 @@ import LocationForm from 'pages/Register/LocationForm';
 import GeneralInfoForm from 'pages/Register/GeneralInfoForm';
 import CareerForm from 'pages/Register/CarrerForm';
 import DocumentationForm from 'pages/Register/DocumentationForm';
+import { TextAlert } from './styled';
 
 const Register = () => {
   const history = useHistory();
@@ -47,6 +48,8 @@ const Register = () => {
           initialValues={store}
         />
       )}
+      <TextAlert>Toda la información personal que nos brinde es de carácter confidencial</TextAlert>
+      <TextAlert>Los campos con * son obligatorios para avanzar con la gestión</TextAlert>
       <Footer />
     </Container>
   );

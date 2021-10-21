@@ -7,6 +7,7 @@ const colors = {
   dark2: '#1839c5',
   dark3: '#000000',
   blue: '#8DA2F8',
+  input1: '#DFEAFB',
 };
 
 export default colors;
