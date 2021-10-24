@@ -1,12 +1,15 @@
 import React from 'react';
 import { Container } from 'styled/base';
-import { Header, Footer } from 'components';
+import { TextAlert } from '../styled';
 
 const FinalPage = () => (
   <Container>
-    <Header />
-    <p>hola</p>
-    <Footer />
+    <TextAlert>
+      Gracias por elegir el Instituto de la Alegría.
+      A la brevedad personal de Administración se contactará
+      con vos para finalizar realizar la matriculación.
+      Tu numero de solicitud es xxxx
+    </TextAlert>
   </Container>
 );
 

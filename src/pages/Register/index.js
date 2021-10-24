@@ -8,8 +8,8 @@ import LocationForm from 'pages/Register/LocationForm';
 import GeneralInfoForm from 'pages/Register/GeneralInfoForm';
 import CareerForm from 'pages/Register/CarrerForm';
 import DocumentationForm from 'pages/Register/DocumentationForm';
-import { TextAlert } from './styled';
 import FinalPage from './FinalPage';
+import { TextAlert } from './styled';
 
 const Register = () => {
   const history = useHistory();
@@ -43,11 +43,14 @@ const Register = () => {
       {step === 2 && <CareerForm onSubmit={handleNext} onBack={handleBack} initialValues={store} />}
       {step === 3 && (
         <DocumentationForm
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmit && handleNext}
           onBack={handleBack}
           onCancel={handleCancel}
           initialValues={store}
         />
+      )}
+      {step === 4 && (
+      <FinalPage initialValues={store} />
       )}
       <TextAlert>Toda la información personal que nos brinde es de carácter confidencial</TextAlert>
       <TextAlert>Los campos con * son obligatorios para avanzar con la gestión</TextAlert>
