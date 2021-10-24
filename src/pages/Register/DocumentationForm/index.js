@@ -10,6 +10,7 @@ import { Formik } from 'formik';
 import { studentProps } from 'utils';
 
 import validationSchema from './validation-schema';
+import { TextAlert } from '../styled';
 
 const DocumentationForm = ({
   onSubmit, initialValues, onBack, onCancel,
@@ -30,6 +31,7 @@ const DocumentationForm = ({
               onUpload={(file) => setFieldValue('personalPhoto', file)}
             />
             <MessageError name="personalPhoto" />
+            <TextAlert>Será utilizada para tu perfil</TextAlert>
           </FormGroup>
         </WrapperInputs>
         <WrapperInputs>
@@ -39,6 +41,7 @@ const DocumentationForm = ({
               onUpload={(file) => setFieldValue('documentPhoto', file)}
             />
             <MessageError name="documentPhoto" />
+            <TextAlert>DNI frente y reverso de la tajeta, pasaporte o precaria</TextAlert>
           </FormGroup>
         </WrapperInputs>
         <WrapperInputs>
@@ -48,6 +51,11 @@ const DocumentationForm = ({
               onUpload={(file) => setFieldValue('certificatePhoto', file)}
             />
             <MessageError name="certificatePhoto" />
+            <TextAlert>
+              Secundario completo, certificado del titulo
+              en trámite o constancia de alumno regular emitido por
+              el establecimiento en el que egresaste o en el que cursas actualmente.
+            </TextAlert>
           </FormGroup>
         </WrapperInputs>
         <WrapperInputs>
@@ -57,6 +65,7 @@ const DocumentationForm = ({
               onUpload={(file) => setFieldValue('approvedMattersPhoto', file)}
             />
             <MessageError name="approvedMattersPhoto" />
+            <TextAlert>Constancia de materias aprobadas en otra institución</TextAlert>
           </FormGroup>
         </WrapperInputs>
         <Row right>

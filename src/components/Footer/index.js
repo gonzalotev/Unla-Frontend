@@ -7,7 +7,7 @@ const Footer = () => (
   <Container>
     <Wrapper>
       <Item>
-        <span>UDLA</span>
+        <span>ISDLA</span>
         <Row>
           <span>Campus Buenos Aires:</span>
           &nbsp;Lima 717 C1073AAO (Ciudad Autónoma de Buenos Aires)

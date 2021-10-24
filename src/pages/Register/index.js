@@ -9,6 +9,7 @@ import GeneralInfoForm from 'pages/Register/GeneralInfoForm';
 import CareerForm from 'pages/Register/CarrerForm';
 import DocumentationForm from 'pages/Register/DocumentationForm';
 import { TextAlert } from './styled';
+import FinalPage from './FinalPage';
 
 const Register = () => {
   const history = useHistory();
