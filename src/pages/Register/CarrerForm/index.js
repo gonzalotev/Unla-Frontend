@@ -8,7 +8,7 @@ import { commonWidthStyle, FormGroup, Row } from 'styled/base';
 import { WrapperInputs, StyledForm } from 'styled/form';
 import { Button } from 'styled/buttons';
 import {
-  careers, inscriptions, faculties, rotations,
+  carrers, inscriptions, faculties, rotations,
 } from 'constant';
 import { Formik } from 'formik';
 import { studentProps } from 'utils';
@@ -32,17 +32,17 @@ const LocationForm = ({ onSubmit, initialValues, onBack }) => {
                 value={values.inscription}
                 options={inscriptions}
               />
-              <MessageError name="documentType" />
+              <MessageError name="inscription" />
             </FormGroup>
             <FormGroup $bsStyle={commonWidthStyle}>
               <Dropdown
-                name="career"
+                name="carrer"
                 placeholder="Carrera *"
                 onChange={handleChange}
-                value={values.career}
-                options={careers}
+                value={values.carrer}
+                options={carrers}
               />
-              <MessageError name="career" />
+              <MessageError name="carrer" />
             </FormGroup>
             <FormGroup $bsStyle={commonWidthStyle}>
               <Dropdown
@@ -52,7 +52,7 @@ const LocationForm = ({ onSubmit, initialValues, onBack }) => {
                 value={values.rotation}
                 options={rotations}
               />
-              <MessageError name="doorNumber" />
+              <MessageError name="rotation" />
             </FormGroup>
           </WrapperInputs>
           <WrapperInputs>

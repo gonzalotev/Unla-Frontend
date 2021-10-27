@@ -6,7 +6,7 @@ import { mergeObject } from 'utils';
 import { useHistory } from 'react-router-dom';
 import LocationForm from 'pages/Register/LocationForm';
 import GeneralInfoForm from 'pages/Register/GeneralInfoForm';
-import CareerForm from 'pages/Register/CarrerForm';
+import CarrerForm from 'pages/Register/CarrerForm';
 import DocumentationForm from 'pages/Register/DocumentationForm';
 import FinalPage from './FinalPage';
 import { TextAlert } from './styled';
@@ -40,7 +40,7 @@ const Register = () => {
       {step === 1 && (
         <LocationForm onSubmit={handleNext} onBack={handleBack} initialValues={store} />
       )}
-      {step === 2 && <CareerForm onSubmit={handleNext} onBack={handleBack} initialValues={store} />}
+      {step === 2 && <CarrerForm onSubmit={handleNext} onBack={handleBack} initialValues={store} />}
       {step === 3 && (
         <DocumentationForm
           onSubmit={handleSubmit && handleNext}

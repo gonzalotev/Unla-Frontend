@@ -23,6 +23,6 @@ export default PropTypes.shape({
   block: PropTypes.string,
   zipCode: PropTypes.string,
   inscription: PropTypes.number,
-  career: PropTypes.number,
+  carrer: PropTypes.number,
   faculty: PropTypes.number,
 });
