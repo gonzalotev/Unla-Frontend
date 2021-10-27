@@ -12,8 +12,8 @@ const Header = () => (
           <Column center $bsStyle={{ width: '150px', marginLeft: '20px', alignSelf: 'center' }}>
             <Row center>
               <Column $bsStyle={{ textAlign: 'center' }}>
-                <Title>UDLA</Title>
-                <Subtitle>Universidad de La Alegría</Subtitle>
+                <Title>ISDLA</Title>
+                <Subtitle>Instituto Superior De La Alegria</Subtitle>
               </Column>
             </Row>
           </Column>

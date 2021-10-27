@@ -10,3 +10,10 @@ export const Form = styled(FormFormik).attrs({ noValidate: true })`
   align-items: center;
   overflow: hidden;
 `;
+
+export const TextAlert = styled.p`
+  display: flex; 
+  height: 80%;
+  width: 100%;
+  padding-left: 10%;
+`;

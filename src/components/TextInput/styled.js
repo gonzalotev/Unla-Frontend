@@ -20,7 +20,7 @@ export const StyledTextInput = styled.input`
     transition: ease-in-out 0.3s;
     ${({ invalid }) => invalid && textError};
     &:focus{
-        background-color: ${colors.dark2};
+        background-color: ${colors.input1};
         color: ${colors.dark1};
     }
 `;

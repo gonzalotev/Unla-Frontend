@@ -10,7 +10,7 @@ export const StyledForm = styled(Form)`
   position: relative;
   height: 100%;
   overflow-x: hidden;
-  background: linear-gradient(153deg, rgba(62,94,199,1) 0%, rgba(168,165,214,1) 0%, rgba(94,137,255,1) 0%, rgba(213,221,249,1) 96%, rgba(255,255,255,1) 100%);
+  background: white;
 `;
 
 export const WrapperInputs = styled.div`

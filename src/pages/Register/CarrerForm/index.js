@@ -46,16 +46,6 @@ const LocationForm = ({ onSubmit, initialValues, onBack }) => {
             </FormGroup>
             <FormGroup $bsStyle={commonWidthStyle}>
               <Dropdown
-                name="faculty"
-                placeholder="Facultad *"
-                onChange={handleChange}
-                value={values.faculty}
-                options={faculties}
-              />
-              <MessageError name="faculty" />
-            </FormGroup>
-            <FormGroup $bsStyle={commonWidthStyle}>
-              <Dropdown
                 name="rotation"
                 placeholder="Turno *"
                 onChange={handleChange}

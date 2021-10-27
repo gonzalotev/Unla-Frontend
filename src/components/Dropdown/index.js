@@ -31,7 +31,6 @@ const Dropdown = ({
         options={options}
         onChange={handleChange}
         placeholder={placeholder}
-        isClearable
         value={value ? find(options, (option) => getOptionValue(option) === value) : null}
         defaultValue={null}
         getOptionValue={getOptionValue}

@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <Container>
       <StyledFormArea>
-        <StyledTittle color={colors.dark1} size={35}>Login</StyledTittle>
+        <StyledTittle color={colors.dark1} size={35}>Acceder</StyledTittle>
         <Formik
           initialValues={{ email: '', password: '' }}
           validationSchema={validationSchema}
@@ -41,8 +41,8 @@ const Login = () => {
             <TextInput
               name="email"
               type="text"
-              label="Email"
-              placeholder="Correo Electronico"
+              label="Correo electronico"
+              placeholder="ISDLA@gmail.com"
               iconLeft={<FiMail />}
             />
             <TextInput
@@ -65,7 +65,7 @@ const Login = () => {
                 />
               ) : (
                 <StyledFormButton type="submit">
-                  Login
+                  Ingresar
                 </StyledFormButton>
               )}
             </ButtonGroup>
@@ -78,7 +78,7 @@ const Login = () => {
         </Formik>
         {error}
       </StyledFormArea>
-      <CopyrightText>All rights reserved &copy;2021</CopyrightText>
+      <CopyrightText>Todos los derechos reservados &copy;2021</CopyrightText>
     </Container>
   );
 };
