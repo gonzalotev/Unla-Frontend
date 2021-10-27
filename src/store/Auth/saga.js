@@ -17,11 +17,11 @@ export function* login({ email, password }) {
       // TODO remove next line when the user is login
     } else {
       yield removeToken();
-      yield put(authLoginError('Not found user.'));
+      yield put(authLoginError('Usuario y/o contraseña incorrecto'));
     }
   } catch (error) {
     yield removeToken();
-    yield put(authLoginError('Internal error'));
+    yield put(authLoginError('Usuario y/o contraseña incorrecto'));
   }
 }
 

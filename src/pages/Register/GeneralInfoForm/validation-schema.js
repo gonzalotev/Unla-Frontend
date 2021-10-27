@@ -17,7 +17,10 @@ const validationSchema = Yup.object().shape({
     .required('Requerido'),
   documentType: Yup.string()
     .required('Requerido'),
-  document: Yup.number()
+  document: Yup.string()
+    .min(8, 'Minimo 8 caracteres')
+    .max(10, 'Maximo 10 caracteres')
+    .matches('')
     .required('Requerido'),
   gender: Yup.string()
     .required('Requerido'),
