@@ -19,6 +19,10 @@ const Routes = () => {
     dispatch(authGetTokenRequest());
   }, []);
 
+  useEffect(() => {
+
+  }, [token]);
+
   return (
     <ConnectedRouter history={history}>
       <GlobalStyle />

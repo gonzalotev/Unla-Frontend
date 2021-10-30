@@ -8,7 +8,7 @@ import states from './states';
 import inscriptions from './inscriptions';
 import initialStates from './initialStates';
 import faculties from './faculties';
-import careers from './careers';
+import carrers from './carrers';
 import rotations from './rotations';
 
 export { colors };
@@ -21,5 +21,5 @@ export { states };
 export { inscriptions };
 export { initialStates };
 export { faculties };
-export { careers };
+export { carrers };
 export { rotations };

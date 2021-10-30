@@ -16,6 +16,7 @@ const DatePickerLocale = ({
       locale={es}
       placeholderText={placeholder}
       showMonthDropdown
+      maxDate={Date.now()}
       showYearDropdown
       adjustDateOnChange
       disabled={isDisabled}

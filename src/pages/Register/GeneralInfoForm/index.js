@@ -101,7 +101,7 @@ const RegisterForm = ({ initialValues = { document: '' }, onSubmit, onCancel }) 
             </FormGroup>
           </WrapperInputs>
           <Row right>
-            <Button onClick={onCancel}>Cancelar</Button>
+            <Button onClick={() => onCancel()}>Cancelar</Button>
             <Button type="submit">Siguiente</Button>
           </Row>
         </StyledForm>
