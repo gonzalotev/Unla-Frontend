@@ -9,7 +9,9 @@ const WithoutSessionRoutes = () => (
     <Route exact path="/login">
       <Login />
     </Route>
-    <Route component={Home} />
+    <Route exact path="/">
+      <Home />
+    </Route>
   </Switch>
 );
 

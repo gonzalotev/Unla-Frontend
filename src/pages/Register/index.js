@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { initialStates } from 'constant';
+import { useDispatch, useSelector } from 'react-redux';
 import { Title, Container } from 'styled/base';
 import { BreadCrumb, Footer, Header } from 'components';
 import { mergeObject } from 'utils';
 import { useHistory } from 'react-router-dom';
+import Home from 'pages/Home';
+import { push } from 'connected-react-router';
+import { Redirect } from 'react-router';
 import LocationForm from 'pages/Register/LocationForm';
 import GeneralInfoForm from 'pages/Register/GeneralInfoForm';
 import CarrerForm from 'pages/Register/CarrerForm';
 import DocumentationForm from 'pages/Register/DocumentationForm';
+import { removeToken } from 'store/Auth/actions';
 import FinalPage from './FinalPage';
 import { TextAlert } from './styled';
 
@@ -15,6 +20,7 @@ const Register = () => {
   const history = useHistory();
   const [step, setStep] = useState(0);
   const [store, setStore] = useState(initialStates.student);
+  const dispatch = useDispatch();
 
   const handleNext = (values) => {
     setStep(step + 1);
@@ -26,7 +32,11 @@ const Register = () => {
     setStore(mergeObject(values, store));
   };
 
-  const handleCancel = () => history.push('/');
+  // const handleCancel = () => dispatch(push('/'));
+
+  const handleCancel = () => {
+    dispatch(removeToken());
+  };
 
   const handleSubmit = (values) => window.alert(`Registro: ${JSON.stringify(values)}`);
 
@@ -35,7 +45,11 @@ const Register = () => {
       <Header />
       <BreadCrumb selectedStep={step + 1} />
       {step === 0 && (
-        <GeneralInfoForm onSubmit={handleNext} onCancel={handleCancel} initialValues={store} />
+        <GeneralInfoForm
+          onSubmit={handleNext}
+          onCancel={handleCancel}
+          initialValues={store}
+        />
       )}
       {step === 1 && (
         <LocationForm onSubmit={handleNext} onBack={handleBack} initialValues={store} />

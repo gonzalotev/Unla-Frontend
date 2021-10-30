@@ -10,6 +10,7 @@ import { Formik } from 'formik';
 import { studentProps } from 'utils';
 import { useDispatch } from 'react-redux';
 import { push } from 'connected-react-router';
+import { useHistory } from 'react-router-dom';
 
 import validationSchema from './validation-schema';
 import { TextAlert } from '../styled';
@@ -18,10 +19,18 @@ const DocumentationForm = ({
   onSubmit, initialValues, onBack, onCancel,
 }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const goToFinalPage = () => dispatch(push('/FinalPage'));
+  const handleSubmit = () => {
+    history.push('/FinalPage');
+  };
 
   return (
-    <Formik validationSchema={validationSchema} initialValues={initialValues} onSubmit={onSubmit}>
+    <Formik
+      validationSchema={validationSchema}
+      initialValues={initialValues}
+      onSubmit={handleSubmit}
+    >
       {({ values, setFieldValue }) => (
         <StyledForm>
           <WrapperInputs>

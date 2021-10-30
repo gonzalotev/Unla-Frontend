@@ -38,6 +38,12 @@ export default function auth(state = initialState, action) {
         isRequested: true,
         token: action.token,
       };
+    case types.REMOVE_TOKEN:
+      localStorage.clear();
+      return {
+        ...state,
+        token: undefined,
+      };
     default:
       return state;
   }

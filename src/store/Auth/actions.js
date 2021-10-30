@@ -7,3 +7,4 @@ export const authLoginError = (error) => ({ type: types.GET_LOGIN_ERROR, error }
 
 export const authGetTokenRequest = () => ({ type: types.GET_TOKEN_REQUEST });
 export const authGetTokenSuccess = (token) => ({ type: types.GET_TOKEN_SUCCESS, token });
+export const removeToken = (token) => ({ type: types.REMOVE_TOKEN });

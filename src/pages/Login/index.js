@@ -26,7 +26,7 @@ const Login = () => {
   const [eye, setEye] = useState(false);
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
-  const goToHome = () => dispatch(push('/Home'));
+  const goToHome = () => dispatch(push('/'));
 
   return (
     <Container>
