@@ -11,7 +11,9 @@ import { studentProps } from 'utils';
 
 import validationSchema from './validation-schema';
 
-const LocationForm = ({ onSubmit, onBack, initialValues }) => (
+const LocationForm = ({
+  onSubmit, onBack, onCancel, initialValues,
+}) => (
   <Formik validationSchema={validationSchema} initialValues={initialValues} onSubmit={onSubmit}>
     {({ values, handleChange }) => (
       <StyledForm>
@@ -52,6 +54,7 @@ const LocationForm = ({ onSubmit, onBack, initialValues }) => (
           </FormGroup>
         </WrapperInputs>
         <Row right>
+          <Button onClick={() => onCancel()}>Cancelar</Button>
           <Button onClick={() => onBack(values)}>Volver</Button>
           <Button type="submit">Siguiente</Button>
         </Row>
