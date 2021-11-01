@@ -16,7 +16,9 @@ import TermsAndConditions from 'pages/Register/TermsAndConditions';
 
 import validationSchema from './validation-schema';
 
-const LocationForm = ({ onSubmit, initialValues, onBack }) => {
+const LocationForm = ({
+  onSubmit, initialValues, onBack, onCancel,
+}) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -72,6 +74,7 @@ const LocationForm = ({ onSubmit, initialValues, onBack }) => {
             </FormGroup>
           </WrapperInputs>
           <Row right>
+            <Button onClick={() => onCancel()}>Cancelar</Button>
             <Button onClick={() => onBack(values)}>Volver</Button>
             <Button type="submit">Siguiente</Button>
           </Row>

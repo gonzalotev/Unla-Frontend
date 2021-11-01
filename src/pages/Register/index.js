@@ -52,9 +52,21 @@ const Register = () => {
         />
       )}
       {step === 1 && (
-        <LocationForm onSubmit={handleNext} onBack={handleBack} initialValues={store} />
+        <LocationForm
+          onSubmit={handleNext}
+          onBack={handleBack}
+          onCancel={handleCancel}
+          initialValues={store}
+        />
       )}
-      {step === 2 && <CarrerForm onSubmit={handleNext} onBack={handleBack} initialValues={store} />}
+      {step === 2 && (
+      <CarrerForm
+        onSubmit={handleNext}
+        onBack={handleBack}
+        onCancel={handleCancel}
+        initialValues={store}
+      />
+      )}
       {step === 3 && (
         <DocumentationForm
           onSubmit={handleSubmit && handleNext}
@@ -62,9 +74,6 @@ const Register = () => {
           onCancel={handleCancel}
           initialValues={store}
         />
-      )}
-      {step === 4 && (
-      <FinalPage initialValues={store} />
       )}
       <TextAlert>Toda la información personal que nos brinde es de carácter confidencial</TextAlert>
       <TextAlert>Los campos con * son obligatorios para avanzar con la gestión</TextAlert>
